@@ -2,6 +2,8 @@
 * Оставить комментарий
 *
 * */
+
+let reviewCounter = -1;
 function getComment() {
     // Создаем объект обычного комментария
     let comment = {}
@@ -57,9 +59,12 @@ const writeReview = review => {
         `<p> <i> <b>${review['author']}</b>  ${review['date']}${likeCounter}   <button onclick = increaseRate()>+</button> </i></p>` +
         `<p>${review['text']}</p>` +
         '</div>';
+    reviewCounter++;
 }
 
 function increaseRate()  {
     debugger
-    document.getElementsByClassName('Rate')[0].innerHTML + '<b>Hi</b>';
+    document.getElementsByClassName('Rate')[reviewCounter].innerHTML = `<b> ${Number(document.getElementsByClassName('Rate')[reviewCounter].textContent) + 1}</b>`;
+    
+    
 }
