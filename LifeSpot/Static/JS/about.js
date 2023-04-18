@@ -109,3 +109,12 @@ function addComment() {
         writeReview(comment)
     }
 }
+
+
+function show(itemIndex) {
+    let slides = document.getElementsByClassName("sliderItem");
+    for (let slide of slides) {
+        slide.style.display = "none";
+    }
+    slides[itemIndex].style.display = "block";
+}

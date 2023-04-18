@@ -109,7 +109,7 @@ img {
 }
 img:hover {
    
-    border: 2px solid grey;
+    border:solid grey;
  
 }
 .slider{
@@ -118,15 +118,23 @@ img:hover {
 
 #left-button {
     position:absolute;
-    left: 0%;
-    top: 15%;
+    left: 3%;
+    top: 13%;
     background-color: transparent;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: orangered;
+    font-size: 2em;
+    color: whitesmoke;
     border:none;
-    height: 0.2vw;
-    width: 0.4vw;
-   
-
     
+}
+
+#right-button {
+    position: absolute;
+    left: 55%;
+    top: 13%;
+    background-color: transparent;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2em;
+    color: white;
+    border: none;
 }
