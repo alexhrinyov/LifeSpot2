@@ -22,7 +22,7 @@ let checker = function (newVisit) {
         // Добавим проверку на первое посещение, чтобы не показывать приветствие
         // лишний раз
         if (newVisit) {
-            alert("Приветствуем на LifeSpot! " + '\n' + "Текущее время: " + new Date().toLocaleString());
+            /*alert("Приветствуем на LifeSpot! " + '\n' + "Текущее время: " + new Date().toLocaleString());*/
         }
     }
     else {
@@ -50,7 +50,8 @@ function handleSession(logger, checker) {
 
     // Проверяем возраст и проставляем, если новый визит
     if (window.sessionStorage.getItem("userAge") == null) {
-        let input = prompt("Пожалуйста, введите ваш возраст?");
+        /*let input = prompt("Пожалуйста, введите ваш возраст?");*/
+        let input = 18;
         window.sessionStorage.setItem("userAge", input)
 
         /* Возраст отсутствовал в sessionStorage. Значит, это первый визит пользователя, и

@@ -100,3 +100,33 @@ input {
 input:focus {
     border: 2px solid dimgrey;
 }
+
+img {
+    width: 60%;
+    border-radius: 3%; 
+    margin: 2%;
+
+}
+img:hover {
+   
+    border: 2px solid grey;
+ 
+}
+.slider{
+    position:relative;
+}
+
+#left-button {
+    position:absolute;
+    left: 0%;
+    top: 15%;
+    background-color: transparent;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: orangered;
+    border:none;
+    height: 0.2vw;
+    width: 0.4vw;
+   
+
+    
+}
