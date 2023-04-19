@@ -111,10 +111,34 @@ function addComment() {
 }
 
 
-function show(itemIndex) {
+// управление слайдами
+const currentSlide = {
+    index: 0
+};
+function showImage(index) {
     let slides = document.getElementsByClassName("sliderItem");
     for (let slide of slides) {
-        slide.style.display = "none";
+        slide.style.display = 'none';
     }
-    slides[itemIndex].style.display = "block";
+    //if (index >= slides.length) {
+    //    slides[0].style.display = 'block';
+    //    currentSlide.index = 0;
+    //}
+    if (index >= 0 && index < slides.length) {
+        slides[index].style.display = 'block';
+    }
+    //if (index < 0) {
+    //    slides[0].style.display = 'block';
+    //    currentSlide.index = 0;
+    //}
+    
 }
+function next(currentIndex) {
+    debugger
+    
+    showImage(currentIndex + 1);
+    currentSlide.index++;
+    
+}
+
+

@@ -105,36 +105,31 @@ img {
     width: 60%;
     border-radius: 3%; 
     margin: 2%;
-
-}
-img:hover {
-   
-    border:solid grey;
- 
-}
-.slider{
-    position:relative;
+    position:static;
 }
 
-#left-button {
-    position:absolute;
-    left: 3%;
-    top: 13%;
-    background-color: transparent;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 2em;
-    color: whitesmoke;
-    border:none;
-    
+
+.slider {
+    position: relative;
+    top: 100px;
+}
+.sliderItem {
+    position: relative;
+    display:block;
 }
 
-#right-button {
+.slider button {
     position: absolute;
-    left: 55%;
-    top: 13%;
-    background-color: transparent;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: blue;
     font-size: 2em;
-    color: white;
-    border: none;
+    cursor: pointer;
+    top:45%;
+    left:5%;
+    z-index:3;
+
 }
+#right-button{
+    left:53%;
+}
+
+

@@ -1,17 +1,19 @@
 ﻿<div class="slider">
-    <script>
-        show(0);
-    </script>
+
     <button id="left-button" onclick="previous()"><<</button>
-    <button id="right-button" onclick="next()">>></button>
+    <button id="right-button" onclick="next(currentSlide.index)">>></button>
     <div class="sliderItem">
         <img src="../Static/Images/london.jpg"><img />
     </div>
+
     <div class="sliderItem">
         <img src="../Static/Images/ny.jpg"><img />
     </div>
     <div class="sliderItem">
         <img src="../Static/Images/spb.jpg"><img />
     </div>
+    <script>
+        showImage(0);
+    </script>
 
 </div>
