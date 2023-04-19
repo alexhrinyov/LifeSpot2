@@ -113,32 +113,43 @@ function addComment() {
 
 // управление слайдами
 const currentSlide = {
-    index: 0
+    index: 0,
+    secondRound: false
 };
 function showImage(index) {
     let slides = document.getElementsByClassName("sliderItem");
     for (let slide of slides) {
         slide.style.display = 'none';
     }
-    //if (index >= slides.length) {
-    //    slides[0].style.display = 'block';
-    //    currentSlide.index = 0;
-    //}
+    if (index >= slides.length) {
+        slides[0].style.display = 'block';
+        currentSlide.secondRound = true;
+    }
     if (index >= 0 && index < slides.length) {
         slides[index].style.display = 'block';
+        currentSlide.secondRound = false;
+    }   
+    if (index < 0) {
+        slides[2].style.display = 'block';
+        currentSlide.secondRound = true;
     }
-    //if (index < 0) {
-    //    slides[0].style.display = 'block';
-    //    currentSlide.index = 0;
-    //}
-    
 }
 function next(currentIndex) {
     debugger
     
     showImage(currentIndex + 1);
-    currentSlide.index++;
-    
+    if (currentSlide.secondRound)
+        currentSlide.index = 0;
+    else
+        currentSlide.index++;
+}
+function previous(currentIndex) {
+    debugger
+    showImage(currentIndex - 1);
+    if (currentSlide.secondRound)
+        currentSlide.index = 2;
+    else
+        currentSlide.index--; 
 }
 
 

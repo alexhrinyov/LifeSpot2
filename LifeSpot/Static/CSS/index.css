@@ -111,21 +111,26 @@ img {
 
 .slider {
     position: relative;
-    top: 100px;
+    object-fit: initial;
+    height: 600px;
 }
 .sliderItem {
     position: relative;
     display:block;
+    width:70vw;
 }
 
 .slider button {
     position: absolute;
-    background-color: blue;
-    font-size: 2em;
+    background-color: transparent;
+    border:none;
+    font-size: 3em;
+    color:white;
     cursor: pointer;
     top:45%;
     left:5%;
     z-index:3;
+    
 
 }
 #right-button{
