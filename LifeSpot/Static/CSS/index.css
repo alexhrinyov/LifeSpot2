@@ -102,39 +102,57 @@ input:focus {
 }
 
 img {
-    width: 60%;
-    border-radius: 3%; 
+    border-radius: 3%;
+    position: relative;
+    width:100%;
+
     margin: 2%;
-    position:static;
 }
 
 
 .slider {
     position: relative;
-    object-fit: initial;
-    height: 600px;
+    display:block;
+    margin-bottom:20px;
+    width:70%;
+    
 }
 .sliderItem {
     position: relative;
-    display:block;
-    width:70vw;
 }
 
 .slider button {
     position: absolute;
+    top: 40%;
+    z-index: 3;
     background-color: transparent;
-    border:none;
+    border: none;
     font-size: 3em;
-    color:white;
+    color: white;
     cursor: pointer;
-    top:45%;
-    left:5%;
-    z-index:3;
     
-
 }
-#right-button{
-    left:53%;
+
+#left-button {
+    left:5%;
+}
+#right-button {
+    right: 5%;
+}
+.slider .sliderItem {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    /* Устанавливаем и изменяем степень прозрачности: */
+    from {
+        opacity: 0.4
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
 
